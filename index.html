@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+
+    <link rel="stylesheet" href="static/css/chat.css" />
+    <link rel="stylesheet" href="static/css/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+</head>
+
+
+
+<!-- CHAT BAR BLOCK -->
+
+<div class="chat-bar-collapsible" id="BgContent">
+
+    <div class="speech-bubble" id="bubble"> En que te podemos ayudar?</div>
+    <button id="chat-button" type="button" class="collapsible_down">
+        <b id="oculAsis" >Asistente</b>
+        <i id="chat-icon"><img src="static/scripts/icon-w.png" width="60px"
+                style="  display:block; margin-left: auto; margin-right: auto;" /></i>
+    </button>
+    <div class="content_chat">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <img src="static/scripts/UP.png" width="250px" />
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText">
+                            <span>Loading...</span>
+
+                        </p>
+                        <button type="button" class="btn btn-outline-success" id="estadia" value="Proceso de estadia"
+                            onclick="estadia()">
+                            Estadia
+                        </button>
+                        <button type="button" class="btn btn-outline-success" id="estancia" value="Proceso de estancia"
+                            onclick="estancia()">
+                            Estancia
+                        </button>
+                        <button type="button" class="btn btn-outline-success" id="reinscripcion"
+                            value="Proceso de reinscripcion" onclick="reinscripcion()">
+                            Reinscripcion
+                        </button>
+                    </div>
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg" onkeyup="this.value = this.value.toLowerCase();"
+                                placeholder="Presiona 'Enter' para enviar" />
+
+                        </div>
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: #3eb595" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+                    <div id="chat-bar-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/scripts/chat.js"></script>
+
+</html>
